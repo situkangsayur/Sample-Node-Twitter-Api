@@ -12,7 +12,7 @@ var accessToken = '2254883460-oXvXGdZvxNU4nYojVeMqO2CjawGvsy0hudzufUo',
 var twitt = 'syalalala... nodejs is the best broh...!!!'; 
 var i=0;
 twitter.getTimeline("user",{
-	screen_name : 'peys032',
+	screen_name : 'jokowi_do2',
 	count:200
     },	
     accessToken,
@@ -25,13 +25,16 @@ twitter.getTimeline("user",{
 		
 		var temp = '';
             // data contains the data sent by twitter
-		for(i=0;i<200;i++){
+		for(i=0;i<200-2;i++){
 			temp = temp + i+' '+data[i]["text"]+'\n\n';
 			
 			console.log(i+' '+data[i]["text"]+'\n');
 		}
 		fs.writeFile('twitter-result.txt', temp, function(err){
-			if(err) return console.log('error file '+ err);
+			if(err){
+				
+				 return console.log('error file '+ err);
+			}
 		});
 	} 
     }
