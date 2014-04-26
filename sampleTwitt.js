@@ -13,7 +13,7 @@ var twitt = 'syalalala... nodejs is the best broh...!!!';
 var i=0;
 twitter.getTimeline("user",{
 	screen_name : 'peys032',
-	count:130
+	count:200
     },	
     accessToken,
     accessTokenSecret,
@@ -25,8 +25,8 @@ twitter.getTimeline("user",{
 		
 		var temp = '';
             // data contains the data sent by twitter
-		for(i=0;i<130;i++){
-			temp = temp + i+' '+data[i]["text"]+'\n';
+		for(i=0;i<200;i++){
+			temp = temp + i+' '+data[i]["text"]+'\n\n';
 			
 			console.log(i+' '+data[i]["text"]+'\n');
 		}
